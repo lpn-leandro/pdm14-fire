@@ -14,7 +14,7 @@ export default function ViewPet({ pet, onDelete }: ViewPetProps) {
 
   return (
     <View
-      style={{ borderTopColor: 'darkblue', borderTopWidth: 1, marginTop: 12 }}
+      style={{ borderTopColor: 'darkblue', borderTopWidth: 1, margin: 12}}
     >
       <Text>id: {pet.id}</Text>
       <Text>Title: {pet.name}</Text>

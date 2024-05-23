@@ -18,10 +18,10 @@ export default function Home() {
       <Stack.Screen
         options={{ title: 'Home', headerRight: () => <HeaderRight /> }}
       />
-      <Text style={globalStyles.title}> MyPets</Text>
+      <Text style={globalStyles.subtitle}> Welcome to MyPets</Text>
 
       <StyledButton
-        title='Register Pet Manually'
+        title='Register Pet'
         onPress={() => router.push('/home/registerP/')}
         style={{ marginTop: 10 }}
       />
@@ -42,7 +42,7 @@ export default function Home() {
               }}
             />
           )}
-          style={{ width: '100%' }}
+          style={{ width: '100%'}}
         />
       )}
     </View>

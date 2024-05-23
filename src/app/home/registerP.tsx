@@ -17,27 +17,27 @@ export default function RegisterP() {
 
   return (
     <View style={globalStyles.container}>
-      <Text style={globalStyles.title}>Register</Text>
+      <Text style={globalStyles.subtitle}>Register</Text>
 
-      <Text>Name</Text>
+      <Text>Name:</Text>
       <TextInput
         style={globalStyles.input}
         value={name}
         onChangeText={setName}
       />
 
-      <Text>Type</Text>
+      <Text>Type:</Text>
       <TextInput
         style={globalStyles.input}
         value={type}
         onChangeText={setType}
       />
 
-      <Text>Age</Text>
+      <Text>Age:</Text>
       <TextInput style={globalStyles.input} value={age} onChangeText={setAge} />
 
       <StyledButton
-        title='register Pet'
+        title='Register'
         onPress={async () => {
           try {
             await create({

@@ -28,7 +28,7 @@ export default function EditPet() {
   if (loading || !pet) return <Loading />;
 
   return (
-    <View>
+    <View style={{margin: 10}}>
       <Stack.Screen
         options={{
           title: 'Pet',
@@ -36,26 +36,27 @@ export default function EditPet() {
         }}
       />
 
-      <Text style={globalStyles.title}>Update Pet</Text>
+      <Text style={globalStyles.subtitle}>Update Pet</Text>
 
-      <Text>Name</Text>
+      <Text>Name:</Text>
       <TextInput
         style={globalStyles.input}
         value={name}
         onChangeText={setName}
       />
 
-      <Text>Type</Text>
+      <Text>Type:</Text>
       <TextInput
         style={globalStyles.input}
         value={type}
         onChangeText={setType}
       />
 
-      <Text>Age</Text>
+      <Text>Age:</Text>
       <TextInput style={globalStyles.input} value={age} onChangeText={setAge} />
 
       <StyledButton
+      style={{marginTop: 10}}
         title='Update'
         onPress={async () => {
           try {

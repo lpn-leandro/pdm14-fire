@@ -25,30 +25,32 @@ export default function loginScreen() {
     <View style={globalStyles.container}>
       <View style={globalStyles.main}>
         <Text style={globalStyles.title}>MyPets</Text>
-        <Text style={globalStyles.subtitle}>The best pets in the world.</Text>
-        <TextInput
-          style={globalStyles.input}
-          value={email}
-          onChangeText={setEmail}
-        />
-        <TextInput
-          style={globalStyles.input}
-          value={password}
-          onChangeText={setPassword}
-        />
-        <StyledButton
-          title='login'
-          onPress={async () => {
-            try {
-              await login(email, password);
-              router.push('/home/');
-            } catch (error: any) {
-              Alert.alert('Login error', error.toString());
-            }
-          }}
-          style={{ marginTop: 12 }}
-        />
+        <Text style={globalStyles.subtitle}>The best pets in the world!</Text>
       </View>
+      <Text style={{color: 'black', fontWeight: 'bold', fontSize: 13}}>E-mail:</Text>
+      <TextInput
+        style={globalStyles.input}
+        value={email}
+        onChangeText={setEmail}
+      />
+      <Text style={{color: 'black', fontWeight: 'bold', fontSize: 13, marginTop: 10}}>Senha:</Text>
+      <TextInput
+        style={globalStyles.input}
+        value={password}
+        onChangeText={setPassword}
+      />
+      <StyledButton
+        title='Login'
+        onPress={async () => {
+          try {
+            await login(email, password);
+            router.push('/home/');
+          } catch (error: any) {
+            Alert.alert('Login error', error.toString());
+          }
+        }}
+        style={{ marginTop: 12 }}
+      />
     </View>
   );
 }
